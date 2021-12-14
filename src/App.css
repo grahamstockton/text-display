@@ -1,0 +1,52 @@
+.input-box {
+  padding-top: 1%;
+  position: absolute;
+  left: 50%;
+  align-self: center;
+  transform: translateX(-50%);
+}
+
+.display-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 95vw;
+  height: 20vw;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  max-width: 20vw;
+  flex: 1 1 120px;
+}
+
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 20vw;
+  flex: 1 1 auto;
+}
+
+@keyframes appear {
+  0% {
+    transform: translate(var(--starting-x), var(--starting-y));
+  }
+  100% {
+    transform: translate(0%, 0%)
+  }
+}
+
+.pixel {
+  --starting-x: -1000%;
+  --starting-y: 1000%;
+  animation: 1s ease-out 0s 1 appear;
+  background-color: #222222;
+  flex: 1 1 auto;
+}
